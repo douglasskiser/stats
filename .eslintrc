@@ -1,0 +1,15 @@
+{
+  "parser": "babel-eslint",
+  "globals": {
+    "global": true,
+    "describe": true,
+    "to": true
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "rules": {
+    "no-console": 2
+  }
+}
