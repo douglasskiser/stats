@@ -1,4 +1,5 @@
-var chai = require('chai');
+const chai = require('chai');
+
 import geometricMean from './index';
 
 describe('geometric mean', () => {

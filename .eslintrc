@@ -3,13 +3,64 @@
   "globals": {
     "global": true,
     "describe": true,
-    "to": true
+    "it": true
   },
   "env": {
     "browser": true,
     "node": true
   },
+  "plugins": ["lodash"],
   "rules": {
-    "no-console": 2
+    "no-console": 2,
+    "block-spacing": 1,
+    "brace-style": 1,
+    "camelcase": 0,
+    "comma-style": 1,
+    "complexity": [2, 8],
+    "curly": 2,
+    "dot-notation": 1,
+    "dot-location": [1, "property"],
+    "eqeqeq": 2,
+    "indent": [1, 2],
+    "key-spacing": 1,
+    "max-depth": [2, 2],
+    "max-len": [1, 140, 2],
+    "max-nested-callbacks": [1, 4],
+    "no-mixed-spaces-and-tabs": [2, "smart-tabs"],
+    "no-trailing-spaces": 1,
+    "no-use-before-define": 2,
+    "no-undef": 2,
+    "no-unused-vars": 2,
+    "no-unused-expressions": 2,
+    "no-lonely-if": 1,
+    "no-nested-ternary": 1,
+    "no-unneeded-ternary": 1,
+    "no-var": 1,
+    "prefer-const": 1,
+    "quotes": [2, "single"],
+    "space-before-blocks": 1,
+    "space-before-function-paren": 1,
+
+    // lodash rules
+    "lodash/callback-binding": 2,
+    "lodash/unwrap": 2,
+    "lodash/no-double-unwrap": 2,
+    "lodash/collection-return": 2,
+    "lodash/no-extra-args": 2,
+    "lodash/no-single-chain": 2,
+    "lodash/prop-shorthand": 1,
+    "lodash/matches-prop-shorthand": 1,
+    "lodash/identity-shorthand": 1,
+    "lodash/preferred-alias": 1,
+    "lodash/prefer-map": 1,
+    "lodash/prefer-reject": 1,
+    "lodash/prefer-filter": 1,
+    "lodash/prefer-compact": 1,
+    "lodash/prefer-constant": 1,
+    "lodash/prefer-is-nil": 1,
+    "lodash/prefer-startswith": 1,
+    "lodash/prefer-chain": 1,
+    "lodash/prefer-matches": 1,
+    "lodash/prefer-times": 1
   }
 }

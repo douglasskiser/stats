@@ -1,4 +1,4 @@
-var chai = require('chai');
+const chai = require('chai');
 
 import midRange from './index';
 

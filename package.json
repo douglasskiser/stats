@@ -1,8 +1,8 @@
 {
   "name": "stats",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A library for making statistical calculations",
+  "main": "dist/stats.js",
   "scripts": {
     "test": "./node_modules/.bin/mocha ./src/**/*.spec.js --compilers js:babel-core/register",
     "lint": "eslint ./src",
@@ -18,12 +18,14 @@
     "babel-cli": "^6.10.1",
     "babel-core": "^6.10.4",
     "babel-eslint": "^6.1.0",
+    "babel-plugin-lodash": "^3.2.0",
     "babel-preset-es2015": "^6.9.0",
     "babel-preset-stage-0": "^6.5.0",
     "babel-register": "^6.9.0",
     "chai": "^3.5.0",
     "chance": "^1.0.3",
     "eslint": "^3.0.0",
+    "eslint-plugin-lodash": "^1.9.2",
     "mocha": "^2.5.3"
   }
 }
