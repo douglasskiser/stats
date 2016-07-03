@@ -1,0 +1,1 @@
+export const sortInAscendingOrder = (data = []) => data.sort((a, b) => a - b);
