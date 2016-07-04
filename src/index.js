@@ -10,6 +10,14 @@ import standardError from './modules/standard-error';
 import skewness from './modules/skewness';
 import coefficientOfVariance from './modules/coefficient-of-variance';
 import kurtosis from './modules/kurtosis';
+import chaiSquared from './modules/chai-squared';
+import percentile from './modules/percentile';
+import ltPercentile from './modules/lt-percentile';
+import gtPercentile from './modules/gt-percentile';
+import firstQuartile from './modules/first-quartile';
+import secondQuartile from './modules/second-quartile';
+import thirdQuartile from './modules/third-quartile';
+import fourthQuartile from './modules/fourth-quartile';
 
 const stats = {
   harmonicMean,
@@ -23,7 +31,15 @@ const stats = {
   standardError,
   skewness,
   kurtosis,
-  coefficientOfVariance
+  coefficientOfVariance,
+  chaiSquared,
+  percentile,
+  ltPercentile,
+  gtPercentile,
+  firstQuartile,
+  secondQuartile,
+  thirdQuartile,
+  fourthQuartile
 };
 
 module.export = stats;

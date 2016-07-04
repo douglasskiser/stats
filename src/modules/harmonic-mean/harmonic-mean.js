@@ -1,3 +1,3 @@
-import {sum, reduce, size} from 'lodash';
+import {sum, reduce, size, divide} from 'lodash';
 
-export const harmonicMean = (data = []) => size(data) / reduce(data, (memo, val) => sum([memo, (1 / val)]), 0);
+export const harmonicMean = (data = []) => divide(size(data), reduce(data, (memo, val) => sum([memo, divide(1, val)]), 0));

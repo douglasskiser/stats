@@ -48,6 +48,38 @@ var _kurtosis = require('./modules/kurtosis');
 
 var _kurtosis2 = _interopRequireDefault(_kurtosis);
 
+var _chaiSquared = require('./modules/chai-squared');
+
+var _chaiSquared2 = _interopRequireDefault(_chaiSquared);
+
+var _percentile = require('./modules/percentile');
+
+var _percentile2 = _interopRequireDefault(_percentile);
+
+var _ltPercentile = require('./modules/lt-percentile');
+
+var _ltPercentile2 = _interopRequireDefault(_ltPercentile);
+
+var _gtPercentile = require('./modules/gt-percentile');
+
+var _gtPercentile2 = _interopRequireDefault(_gtPercentile);
+
+var _firstQuartile = require('./modules/first-quartile');
+
+var _firstQuartile2 = _interopRequireDefault(_firstQuartile);
+
+var _secondQuartile = require('./modules/second-quartile');
+
+var _secondQuartile2 = _interopRequireDefault(_secondQuartile);
+
+var _thirdQuartile = require('./modules/third-quartile');
+
+var _thirdQuartile2 = _interopRequireDefault(_thirdQuartile);
+
+var _fourthQuartile = require('./modules/fourth-quartile');
+
+var _fourthQuartile2 = _interopRequireDefault(_fourthQuartile);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var stats = {
@@ -62,7 +94,15 @@ var stats = {
   standardError: _standardError2.default,
   skewness: _skewness2.default,
   kurtosis: _kurtosis2.default,
-  coefficientOfVariance: _coefficientOfVariance2.default
+  coefficientOfVariance: _coefficientOfVariance2.default,
+  chaiSquared: _chaiSquared2.default,
+  percentile: _percentile2.default,
+  ltPercentile: _ltPercentile2.default,
+  gtPercentile: _gtPercentile2.default,
+  firstQuartile: _firstQuartile2.default,
+  secondQuartile: _secondQuartile2.default,
+  thirdQuartile: _thirdQuartile2.default,
+  fourthQuartile: _fourthQuartile2.default
 };
 
 module.export = stats;

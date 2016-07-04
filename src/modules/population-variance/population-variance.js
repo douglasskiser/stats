@@ -1,8 +1,5 @@
-import {mean, reduce, divide, size} from 'lodash';
+import {divide, size} from 'lodash';
 
-const getSumOfSquares = (data) => reduce(data, (sumOfSquares, val) => {
-  sumOfSquares += Math.pow(val - mean(data), 2);
-  return sumOfSquares;
-}, 0);
+import sumNthPowerDeviations from '../sum-nth-power-deviations';
 
-export const populationVariance = (data = []) => divide(getSumOfSquares(data), size(data));
+export const populationVariance = (data = []) => divide(sumNthPowerDeviations(data, 2), size(data));
