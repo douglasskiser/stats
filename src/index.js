@@ -7,6 +7,9 @@ import populationVariance from './modules/population-variance';
 import sampleStandardDeviation from './modules/sample-standard-deviation';
 import sampleVariance from './modules/sample-variance';
 import standardError from './modules/standard-error';
+import skewness from './modules/skewness';
+import coefficientOfVariance from './modules/coefficient-of-variance';
+import kurtosis from './modules/kurtosis';
 
 const stats = {
   harmonicMean,
@@ -17,7 +20,10 @@ const stats = {
   populationVariance,
   sampleStandardDeviation,
   sampleVariance,
-  standardError
+  standardError,
+  skewness,
+  kurtosis,
+  coefficientOfVariance
 };
 
 module.export = stats;

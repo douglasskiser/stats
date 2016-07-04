@@ -36,6 +36,18 @@ var _standardError = require('./modules/standard-error');
 
 var _standardError2 = _interopRequireDefault(_standardError);
 
+var _skewness = require('./modules/skewness');
+
+var _skewness2 = _interopRequireDefault(_skewness);
+
+var _coefficientOfVariance = require('./modules/coefficient-of-variance');
+
+var _coefficientOfVariance2 = _interopRequireDefault(_coefficientOfVariance);
+
+var _kurtosis = require('./modules/kurtosis');
+
+var _kurtosis2 = _interopRequireDefault(_kurtosis);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var stats = {
@@ -47,7 +59,10 @@ var stats = {
   populationVariance: _populationVariance2.default,
   sampleStandardDeviation: _sampleStandardDeviation2.default,
   sampleVariance: _sampleVariance2.default,
-  standardError: _standardError2.default
+  standardError: _standardError2.default,
+  skewness: _skewness2.default,
+  kurtosis: _kurtosis2.default,
+  coefficientOfVariance: _coefficientOfVariance2.default
 };
 
 module.export = stats;
