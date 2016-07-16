@@ -4,9 +4,9 @@
   "description": "A library for making statistical calculations",
   "main": "dist/stats.js",
   "scripts": {
-    "test": "./node_modules/.bin/mocha ./src/**/*.spec.js --compilers js:babel-core/register",
+    "test": "./node_modules/.bin/mocha ./src/**/**/*.spec.js --compilers js:babel-core/register",
     "lint": "eslint ./src",
-    "build": "babel src/index.js > dist/stats.js"
+    "build": "rollup -c"
   },
   "author": "Douglass Kiser",
   "license": "ISC",
@@ -25,6 +25,9 @@
     "chance": "^1.0.3",
     "eslint": "^3.0.0",
     "eslint-plugin-lodash": "^1.9.2",
-    "mocha": "^2.5.3"
+    "mocha": "^2.5.3",
+    "rollup-plugin-babel": "^2.6.1",
+    "rollup-plugin-includepaths": "^0.1.5",
+    "rollup-plugin-uglify": "^1.0.1"
   }
 }
