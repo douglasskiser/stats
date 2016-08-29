@@ -1,3 +1,7 @@
-import {sum, reduce, size, divide} from 'lodash';
+import R from 'ramda';
 
-export const harmonicMean = (data = []) => divide(size(data), reduce(data, (memo, val) => sum([memo, divide(1, val)]), 0));
+const getAverage = (val) => R.divide(1, val);
+const addAverage = (a, b) => R.add(a, getAverage(b));
+const sumAverages = (data) => R.reduce(addAverage, 0, data);
+
+export const harmonicMean = ({data}) => R.divide(R.length(data), sumAverages(data));

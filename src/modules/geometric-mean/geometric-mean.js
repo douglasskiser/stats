@@ -1,3 +1,5 @@
-import {multiply, reduce, size, divide} from 'lodash';
+import R from 'ramda';
 
-export const geometricMean = (data = []) => Math.pow(reduce(data, (memo, num) => multiply(memo, num), 1), divide(1, size(data)));
+const getMultipliedValue = R.compose(R.reduce(R.multiply, 1, R.__));
+const getArrayPercentage = R.compose(R.divide(1), R.length);
+export const geometricMean = ({data}) => Math.pow(getMultipliedValue(data), getArrayPercentage(data));

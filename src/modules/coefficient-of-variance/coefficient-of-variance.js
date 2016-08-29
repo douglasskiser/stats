@@ -1,4 +1,4 @@
-import {divide, mean} from 'lodash';
+import R from 'ramda';
 import sampleStandardDeviation from '../sample-standard-deviation';
 
-export const coefficientOfVariance = (data = []) => divide(sampleStandardDeviation(data), mean(data));
+export const coefficientOfVariance = R.curry((data) => R.divide(sampleStandardDeviation(data), R.mean(data)));

@@ -1,5 +1,8 @@
-import {map, size, range, subtract, compact} from 'lodash';
+import R from 'ramda';
 
-export const changeInValue = (data = []) => compact(map(
-  range(size(data)), (valueIndex) => valueIndex > 0 ? subtract(data[valueIndex], data[subtract(valueIndex, 1)]) : null
-));
+const getDifferenceInValue = (ogData, valueIndex) => R.subtract(ogData[valueIndex], ogData[R.subtract(valueIndex, 1)]);
+const getChangesInValue = (ogData, data) => R.map((valueIndex) => valueIndex > 0 ? getDifferenceInValue(ogData, valueIndex): null, data);
+const filterNonNulls = (val) => val !== null;
+const rangeFromDataSize = R.compose(R.range(0, R.__), R.length);
+const createChangeInValueArray = (data) => getChangesInValue(data, rangeFromDataSize(data));
+export const changeInValue = R.compose(R.filter(filterNonNulls), createChangeInValueArray);

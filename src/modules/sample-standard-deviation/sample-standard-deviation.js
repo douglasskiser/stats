@@ -1,3 +1,4 @@
+import R from 'ramda';
 import sampleVariance from '../sample-variance';
 
-export const sampleStandardDeviation = (data = []) => Math.sqrt(sampleVariance(data));
+export const sampleStandardDeviation = R.compose(Math.sqrt, sampleVariance);

@@ -1,5 +1,5 @@
-import {size, divide} from 'lodash';
-
+import R from 'ramda';
 import sampleStandardDeviation from '../sample-standard-deviation';
 
-export const standardError = (data = []) => divide(sampleStandardDeviation(data), Math.sqrt(size(data)));
+const getSquareRoot = R.compose(Math.sqrt, R.length);
+export const standardError = ({data}) => R.divide(sampleStandardDeviation(data), getSquareRoot(data));

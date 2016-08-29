@@ -1,3 +1,7 @@
-import {subtract, multiply, round, size} from 'lodash';
+import R from 'ramda';
 
-export const gtPercentile = (data = [], percent = 1) => subtract(size(data), round(multiply(percent, size(data))));
+const getPercentile = ({data, percent = 1}) => R.multiply(percent, R.length(data));
+
+export const gtPercentile = ({data, percent = 1}) => {
+  return R.compose(R.subtract(R.length(data)), Math.round, getPercentile)({data, percent});
+};
